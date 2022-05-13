@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <style>
+        .input-box{ position:relative; margin:10px 0; }
+        .input-box > input{ background:transparent; border:none; border-bottom: solid 1px rgb(239, 36, 36); padding:20px 0px 5px 0px; font-size:14pt; width:100%; }
+         input::placeholder{ color:transparent; }
+         input:placeholder-shown + label{ color:rgb(221, 28, 28); font-size:14pt; top:15px; }
+         input:focus + label, label{ color:#d64a1b; font-size:10pt; pointer-events: none; position: absolute; left:0px; top:0px; transition: all 0.2s ease ; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; }
+         input:focus, input:not(:placeholder-shown){ border-bottom: solid 1px #8aa1a1; outline:none; }
+         .btn {
+  position:relative;
+  left:50%;
+  transform: translateX(-50%);
+  margin-bottom: 40px;
+  width:80%;
+  height:40px;
+  background: linear-gradient(125deg,#e50a0a,#e50a0a,#e50a0a);
+  background-position: left;
+  background-size: 200%;
+  color:white;
+  font-weight: bold;
+  border:none;
+  cursor:pointer;
+  transition: 0.4s;
+  display:inline;
+}
+    </style>
+</head>
+<body>
+ <header> <h2>Login</h2> </header>
+  <form action="" method="POST"> <div class="input-box"> 
+    <input id="username" type="text" name="username" placeholder="아이디"> 
+    <label for="username">아이디</label> </div> 
+    <div class="input-box"> <input id="password" type="password" name="password" placeholder="비밀번호">
+    <label for="password">비밀번호</label> </div> 
+    <div id="forgot">비밀번호 찾기</div> 
+    <input type="submit" class="btn" value="로그인"> </form>
+</body>
+</html>
